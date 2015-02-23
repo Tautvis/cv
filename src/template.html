@@ -1,0 +1,122 @@
+{%- macro date(startDate, endDate) -%}
+  <div class="date">
+    {%- if startDate -%}<span class="startDate">{{startDate | replace('-', '/')}}</span>{%- endif -%}
+    {%- if startDate and endDate -%}&nbsp;<span class="dateSep">&ndash;</span>&nbsp;{%- endif -%}
+    {%- if endDate -%}<span class="endDate">{{endDate | replace('-', '/')}}</span>{%- endif -%}
+  </div>
+{%- endmacro -%}
+
+{%- macro include(file) -%}
+{%- include file -%}
+{%- endmacro -%}
+
+<!doctype html>
+<html>
+  <head>
+    <title>{{basics.name}}'s resume</title>
+
+    <link type="text/css" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <style type="text/css">
+      {{ include("style.css") | indent(width=6)}}
+    </style>
+  </head>
+
+  <body>
+    <div class="resume page">
+      <div class="section aboutMe">
+        <h1 class="name">{{basics.name}}</h1>
+        <div class="phone">{{basics.phone}}</div>
+        <div class="email"><a href="mailto:{{basics.email}}">{{basics.email}}</a></div>
+        <ul class="profiles">
+          {% for profile in basics.profiles %}
+            <li class="profile {{profile.network | lower}}">
+              <a href="{{profile.url}}">{{profile.username}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="section workExperience">
+        <h2 class="sectionTitle">Work Experience</h2>
+        <ol class="employments">
+          {% for employment in work %}
+            <li class="employment {{employment.type | lower}}">
+              {{date(employment.startDate, employment.endDate)}}
+              <div class="info">
+                <span class="position">{{employment.position}}</span>,
+                <span class="company">{{employment.company}}</span>,
+                <span class="city">{{employment.location.city}}</span>,
+                <span class="country">{{employment.location.country}}</span>
+              </div>
+              <div class="summary">{{employment.summary}} Keywords: {{employment.keywords | join(", ")}}</div>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+
+      <div class="section education">
+        <h2 class="sectionTitle">Education</h2>
+        <ol class="schoolings">
+          {% for schooling in education %}
+            <li class="schooling">
+              {{date(schooling.startDate, schooling.endDate)}}
+              <div class="info">
+                <span class="studyType">{{schooling.studyType}}</span>
+                <span class="distinction">{{schooling.distinction}}</span>,
+                <span class="area">{{schooling.area}}</span>,
+                <span class="institution">{{schooling.institution}}</span>,
+                <span class="country">{{schooling.location.country}}</span>
+              </div>
+              <div class="summary">{{schooling.summary}} Overall grade {{schooling.gpa}}</div>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+
+      <div class="section projectsAndCompetitions">
+        <h2 class="sectionTitle">Projects</h2>
+        <ol class="projects">
+          {% for project in projects %}
+            <li class="project">
+              {{date(project.startDate, project.endDate)}}
+              <div class="info">
+                <span class="name">{{project.name}}</span>,
+                <span class="type">{{project.type}}</span>
+              </div>
+              <div class="summary">{{project.summary}}</div>
+            </li>
+          {% endfor %}
+        </ol>
+        <ol class="competitions">
+          {% for competition in competitions %}
+            <li class="competition">
+              {{date(competition.startDate, competition.endDate)}}
+              <div class="info">
+                <span class="event">{{competition.event}}</span>,
+                <span class="sponsor">{{competition.sponsor}}</span>
+              </div>
+              <div class="summary">{{competition.summary}}</div>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+
+      <div class="section publications">
+        <h2 class="sectionTitle">Publications</h2>
+        <ol class="publications">
+          {% for publication in publications %}
+            <li class="publication">
+            {{date(publication.releaseDate)}}
+              <div class="info">
+                <span class="title">{{publication.name}}</span>,
+                <span class="publisher">{{publication.publisher}}</span>
+              </div>
+              <div class="summary">{{publication.summary}}</div>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>

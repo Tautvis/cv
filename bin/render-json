@@ -1,0 +1,50 @@
+#!/usr/bin python2.7
+"""Simple script to render a JSON object using a Jinja2 template."""
+
+
+from __future__ import print_function
+from attrdict import AttrDict
+from jinja2 import FileSystemLoader
+from jinja2.environment import Environment
+import json
+import os
+
+
+NONE = lambda: None
+
+
+def load_json(json_file):
+    return AttrDict(json.load(json_file), default_factory=NONE)
+
+
+def render_template(template_file, variables):
+    template_dir, template_name = os.path.split(template_file.name)
+    env = Environment()
+    env.loader = FileSystemLoader(template_dir)
+    template = env.get_template(template_name)
+    return template.render(variables)
+
+
+def render_json(json_file, template_file):
+    json_obj = load_json(json_file)
+    html = render_template(template_file, json_obj)
+    return html
+
+
+def _main():
+    from argparse import ArgumentParser, FileType
+    parser = ArgumentParser(description=__doc__)
+    parser.add_argument('json', type=FileType('r'),
+                        help='the JSON object to render')
+    parser.add_argument('template', type=FileType('r'),
+                        help='the jinja2 template used to render the object')
+    args = parser.parse_args()
+    try:
+        print(render_json(args.json, args.template))
+    finally:
+        args.json.close()
+        args.template.close()
+
+
+if __name__ == '__main__':
+    _main()
