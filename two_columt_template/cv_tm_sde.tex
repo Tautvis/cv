@@ -10,6 +10,7 @@
 % Alessandro (The CV Inn)
 %
 % IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+% compile with lualatex: lualatex cv_tm_sde.tex
 %
 % This template uses several fonts not included with Windows/Linux by
 % default. If you get compilation errors saying a font is missing, find the line
@@ -24,7 +25,7 @@
 
 \documentclass[10pt]{article} % Font size - 10pt, 11pt or 12pt
 
-\usepackage[hmargin=1cm, vmargin=1cm]{geometry} % Document margins
+\usepackage[hmargin=1.25cm, vmargin=1.5cm]{geometry} % Document margins
 
 \usepackage{marvosym} % Required for symbols in the colored box
 \usepackage{ifsym} % Required for symbols in the colored box
@@ -81,7 +82,7 @@
 
 %----------------------------------------------------------------------------------------
 
-\begin{minipage}[t]{0.58\textwidth} % Start the left-hand side of the page
+\begin{minipage}[t]{0.5\textwidth} % Start the left-hand side of the page
 \vspace{0pt} % Trick for alignment
 
 %----------------------------------------------------------------------------------------
@@ -119,17 +120,22 @@ Spearheaded cloud adoption within the company.}\\
 {\raggedright\large Software development engineer\\
 \textit{Amazon}, United Kingdom and Canada\\[5pt]}
 
-\normalsize{Designed and developed a payment disbursement 
+\normalsize{I worked in a team that designed and 
+developed a streaming payment disbursement 
 platform designed to resiliently handle \$100B+ payment throughput. 
-One of my primary focuses is fraud and duplicate detection modules 
-that apply ML and fuzzy matching to achieve high performance.
+I focused on fraud/duplicate detection prototype module
+that applies ML and fuzzy matching that outperform rule based approach.
+\\
 
-Worked on providing personalized content on Amazon website and services, such as Fire TV, worldwide.
-Extended a heavily human heuristics based recommendation
-ranking system with ML models allowing flexible
+Prior to this I worked in a team that is responsible for majority of personalized 
+content on Amazon website and services, such as Fire TV, worldwide.
+Extended a human heuristics based recommendation
+ranking system with machine learned models allowing flexible
 optimization goals as well as better customer experience via accurate personalization.
 Quickly prototyped new models and performed analysis in Python
 while productionising best performing ideas in Java.
+\\
+
 Prototyped a book language inference model that works purely from the title of the book.
 Prototyped a model to detect adult content used to prevent inappropriate content on main Amazon website.
 Developed highly parallelisable code base that runs on a fleet of thousands of hosts.}\\
@@ -172,19 +178,19 @@ The model predicted a new structure and defined under what circumstances it form
 % WORK EXPERIENCE Android
 %------------------------------------------------
 
-% {\raggedleft\textsc{July 2012}\par}
+{\raggedleft\textsc{July 2012}\par}
 
-% {\raggedright\large Android games}%\\
-% \textit{Mobile app}\\[5pt]}
+{\raggedright\large Android games}\\
+\textit{Mobile app}\\[5pt]}
 
-% \normalsize{Co-created two Android free-to-play games.
-% Both applications are very successful with over a million downloads.}\\
+\normalsize{Co-created two Android free-to-play games.
+Both applications are very successful with over a million downloads.}\\
 
 %----------------------------------------------------------------------------------------
 
 \end{minipage} % End the left-hand side of the page
 \hfill
-\begin{minipage}[t]{0.36\textwidth} % Start the right-hand side of the page
+\begin{minipage}[t]{0.44\textwidth} % Start the right-hand side of the page
 \vspace{0pt} % Trick for alignment
 
 %----------------------------------------------------------------------------------------
@@ -192,11 +198,12 @@ The model predicted a new structure and defined under what circumstances it form
 %----------------------------------------------------------------------------------------
 
 \colorbox{shade}{\textcolor{text1}{
-\begin{tabular}{c|p{6cm}}
+\begin{tabular}{c|p{7cm}}
 \raisebox{-4pt}{\textifsymbol{18}} & 25 Chorlton st, Manchester, UK \\
 \raisebox{-3pt}{\Mobilefone} & +447585234606 \\
 \raisebox{-1pt}{\Letter} & \href{mailto:tautvydas.misiunas@gmail.com}{tautvydas.misiunas@gmail.com} \\
 \faLinkedin & \href{https://www.linkedin.com/in/misiunas}{Tautvydas} \\
+\faGithub & \href{https://github.com/Tautvis}{Tautvis} \\
 \end{tabular}
 }
 }\\[10pt]
