@@ -25,7 +25,7 @@
 
 \documentclass[10pt]{article} % Font size - 10pt, 11pt or 12pt
 
-\usepackage[hmargin=1.25cm, vmargin=1.5cm]{geometry} % Document margins
+\usepackage[hmargin=2cm, vmargin=1.5cm]{geometry} % Document margins
 
 \usepackage{marvosym} % Required for symbols in the colored box
 \usepackage{ifsym} % Required for symbols in the colored box
@@ -95,6 +95,7 @@
 % WORK EXPERIENCE THG - Manchester
 %------------------------------------------------
 
+\vspace{0.5cm}
 {\raggedleft\textsc{Oct 2016 - Oct 2017}\par}
 
 {\raggedright\large Senior data scientist\\
@@ -104,17 +105,23 @@
 Developed a forecasting solution that accurately predicts global 
 and regional customer demand. Scaled to a high number of product 
 lines (over 250k) by building a distributed application running 
-on Apache Spark and Google Dataproc.
+on Apache Spark and Google Dataproc. Among multiple forecasting models 
+developed LSTM predictor utilizing Keras/TensorFlow.
+\\
 
-Optimised and automated promotion strategy for multiple webshops and locales.
+Automated promotion strategy for multiple webshops and locales. 
+Solution reduced manual work required while achieving better conversion.
 Reduced distribution warehouse costs by optimising operations such 
 as walking distance on the warehouse floor.
+\\
+
 Spearheaded cloud adoption within the company.}\\
 
 %------------------------------------------------
 % WORK EXPERIENCE Amazon
 %------------------------------------------------
 
+\vspace{0.5cm}
 {\raggedleft\textsc{Oct 2014 - Sep 2016}\par}
 
 {\raggedright\large Software development engineer\\
@@ -140,51 +147,6 @@ Prototyped a book language inference model that works purely from the title of t
 Prototyped a model to detect adult content used to prevent inappropriate content on main Amazon website.
 Developed highly parallelisable code base that runs on a fleet of thousands of hosts.}\\
 
-%------------------------------------------------
-% WORK EXPERIENCE Ocado
-%------------------------------------------------
-
-{\raggedleft\textsc{Nov 2012 – Aug 2013}\par}
-
-{\raggedright\large Software developer\\
-\textit{Ocado}, London, United Kingdom\\[5pt]}
-
-\normalsize{Java back-end developer on MHE control team,
-providing a reliable, real-time application responsible for
-control over sixty interconnected conveyors and cranes.
-Developed an optimization module which exploits idle machines
-to improve physical inventory distribution.
-The module required improved routing routine within a continuously changing warehouse.}\\
-
-%------------------------------------------------
-% WORK EXPERIENCE Puslaidininkiu ketedra
-%------------------------------------------------
-
-{\raggedleft\textsc{Sep 2010 - June 2011}\par}
-
-{\raggedright\large Research assistant\\
-\textit{Center for Physical Sciences and Technology}, Vilnius, Lithuania\\[5pt]}
-
-\normalsize{Under the supervision of Prof. E. Tornau,
- developed computational model to emulate the behavior
-of triangular-shaped molecules. We have extended existing
-phase models, including Potts and Blume-Emery-Griffits,
-to support molecule's ability to settle ontothe lattice.
-The model successfully explained two structures which were observed in experiments.
-The model predicted a new structure and defined under what circumstances it forms.}\\
-
-
-%------------------------------------------------
-% WORK EXPERIENCE Android
-%------------------------------------------------
-
-{\raggedleft\textsc{July 2012}\par}
-
-{\raggedright\large Android games}\\
-\textit{Mobile app}\\[5pt]}
-
-\normalsize{Co-created two Android free-to-play games.
-Both applications are very successful with over a million downloads.}\\
 
 %----------------------------------------------------------------------------------------
 
@@ -212,6 +174,7 @@ Both applications are very successful with over a million downloads.}\\
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 
+\vspace{0.5cm}
 \section{Education}
 
 \begin{tabular}{rl} % Start a table with two columns, one for dates and one for qualifications
@@ -237,6 +200,7 @@ Both applications are very successful with over a million downloads.}\\
 %	PROJECTS
 %----------------------------------------------------------------------------------------
 
+\vspace{0.5cm}
 \section{Projects}
 
 \begin{tabular}{rl}
@@ -257,29 +221,101 @@ Both applications are very successful with over a million downloads.}\\
 %	COMPUTER SKILLS
 %----------------------------------------------------------------------------------------
 
+\vspace{0.5cm}
 \section{Technical Skills}
 
 \begin{tabular}{rl}
+Machine & \textsc{Scikit-learn}, \textsc{TensorFlow}, \textsc{Keras},\\
+learning & \textsc{Matlab}, \textsc{Weka}, \textsc{Hadoop},\\
+& \textsc{Spark}\\
 Software & \textsc{Java}, \textsc{Python}, \textsc{Scala}, Linux,\\
-development & \textsc{Jenkins}, maven, gradle,\\
+development & \textsc{Jenkins}, maven, gradle, sbt,\\
 & \textsc{c++}, \textsc{bash}, \textsc{Ruby}, \textsc{AWS}, \textsc{GCP}\\
-Machine & \textsc{Matlab}, \textsc{Octane}, \textsc{Hadoop},\\
-learning & \textsc{Scikit-learn}, \textsc{Theano}, \textsc{Weka},\\
-& \textsc{Spark}, \textsc{Amazon EML \& EMR} \\
 & \\
 \end{tabular}
+
+%----------------------------------------------------------------------------------------
+
+\end{minipage} % End right-hand side of the page
+
+%----------------------------------------------------------------------------------------
+%	SECOND PAGE
+%----------------------------------------------------------------------------------------
+\newpage
+
+\vspace*{2cm}
+
+\begin{minipage}[t]{0.5\textwidth} % Start the left-hand side of the page
+\vspace{0pt} % Trick for alignment
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE (Continued)
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+% WORK EXPERIENCE Ocado
+%------------------------------------------------
+
+{\raggedleft\textsc{Nov 2012 – Aug 2013}\par}
+
+{\raggedright\large Software developer\\
+\textit{Ocado}, London, United Kingdom\\[5pt]}
+
+\normalsize{Java back-end developer on MHE control team,
+providing a reliable, real-time application responsible for
+control over sixty interconnected conveyors and cranes.
+Developed an optimization module which exploits idle machines
+to improve physical inventory distribution.
+The module required improved routing routine within a continuously changing warehouse.}\\
+
+%------------------------------------------------
+% WORK EXPERIENCE Puslaidininkiu ketedra
+%------------------------------------------------
+
+\vspace{0.5cm}
+{\raggedleft\textsc{Sep 2010 - June 2011}\par}
+
+{\raggedright\large Research assistant\\
+\textit{Center for Physical Sciences and Technology}, Vilnius, Lithuania\\[5pt]}
+
+\normalsize{Under the supervision of Prof. E. Tornau,
+ developed computational model to emulate the behavior
+of triangular-shaped molecules. We have extended existing
+phase models, including Potts and Blume-Emery-Griffits,
+to support molecule's ability to settle ontothe lattice.
+The model successfully explained two structures which were observed in experiments.
+The model predicted a new structure and defined under what circumstances it forms.}\\
+
+
+%------------------------------------------------
+% WORK EXPERIENCE Android
+%------------------------------------------------
+
+\vspace{0.5cm}
+{\raggedleft\textsc{July 2012}\par}
+
+{\raggedright\large Android games\\
+\textit{Mobile app}\\[5pt]}
+
+\normalsize{Co-created two Android free-to-play games.
+Both applications are highly successful with over a million downloads.}\\
+
+\end{minipage} % End the left-hand side of the page
+\hfill
+\begin{minipage}[t]{0.44\textwidth} % Start the right-hand side of the page
+\vspace{0pt} % Trick for alignment
 
 %----------------------------------------------------------------------------------------
 %	COMMUNICATION SKILLS
 %----------------------------------------------------------------------------------------
 
-\section{Communication Skills}
+% \section{Communication Skills}
 
-\begin{tabular}{rl}
-\textsc{Conferences}
-& Amazon Machine \\
-& Learning Conference -- 2015, 2016\\
-\end{tabular}\\[10pt]
+% \begin{tabular}{rl}
+% \textsc{Conferences}
+% & Amazon Machine \\
+% & Learning Conference -- 2015, 2016\\
+% \end{tabular}\\[10pt]
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
@@ -296,6 +332,18 @@ learning & \textsc{Scikit-learn}, \textsc{Theano}, \textsc{Weka},\\
 \end{tabular}\\[10pt]
 
 %----------------------------------------------------------------------------------------
+%	HOBBIES
+%----------------------------------------------------------------------------------------
+
+\vspace{0.5cm}
+\section{Hobbies}
+\begin{itemize}
+	\item Kaggle - ML challenges
+	\item Project Euler - Computational math problems
+	\item Halite I \& II - autonomous agents via ML
+	\item Reinforcement learning
+	\item Sailing, skiing, quadcopters, movies, video games
+\end{itemize}
 
 \end{minipage} % End right-hand side of the page
 
